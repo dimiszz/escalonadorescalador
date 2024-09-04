@@ -73,4 +73,17 @@ public class BCP implements Comparable<BCP> {
         return Integer.compare(bcp.creditos,this.creditos);
     }
 
+    // Printar informacoes do processo
+    public void print(){
+        System.out.println("\nPC: " + this.pc);
+        System.out.println("Estado: " + this.estado);
+        System.out.println("X: " + this.X);
+        System.out.println("Y: " + this.Y);
+        System.out.println("Prioridade: " + this.prioridade);
+        System.out.println("Creditos: " + this.creditos);
+        System.out.println("Comandos:");
+        for (String comando : this.comandos) {
+            System.out.println(comando);
+        }
+    }
 }

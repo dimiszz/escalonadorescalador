@@ -34,4 +34,12 @@ public class TabelaDeProcessos {
             processo.resetarCreditos();
         }
     }
+
+    // Printar informacoes de todos os processos
+    public void print(){
+        System.out.println("Tabela de Processos:");
+        for (BCP processo : this.processos) {
+            processo.print();
+        }
+    }
 }

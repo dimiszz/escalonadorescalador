@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Entrei na Main!");
+        // Criacao das estruturas
         int n_com;
         ListaBloqueados listaBloqueados = new ListaBloqueados();
         FilaProntos filaProntos = new FilaProntos();
@@ -11,8 +11,11 @@ public class Main {
         filehandler.processar();
         tabelaDeProcessos.inicializaFilaProntos(filaProntos);
 
+        // Imprime os processos adicionados (teste)
+        tabelaDeProcessos.print();
+
+        // Laco principal
         while(tabelaDeProcessos.exists()){
-            System.out.println("Entrou no while!");
             if(filaProntos.isEmpty()) {
                 listaBloqueados.atualizarBloqueados(filaProntos);
                 continue;
