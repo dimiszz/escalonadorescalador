@@ -13,11 +13,11 @@ public class FileHandler {
     /// OTIMIZAR CONTADOR DE LINHAS!
     private void processarArquivos() {
         BufferedReader reader;
-        File[] files = new File("/programas").listFiles();
+        File[] files = new File("./programas").listFiles();
         for (File file : files) {
             if (file.isFile()) {
                 try {
-                    reader = new BufferedReader(new FileReader(file.getName()));
+                    reader = new BufferedReader(new FileReader("./programas/" + file.getName()));
                     if (file.getName().startsWith("prioridades") || file.getName().startsWith("quantum"))
                         continue;
                     BCP bcp = new BCP(24);
@@ -39,7 +39,7 @@ public class FileHandler {
         BufferedReader reader;
         int counter = 0;
         try {
-            reader = new BufferedReader(new FileReader("programas/prioridades.txt"));
+            reader = new BufferedReader(new FileReader("./programas/prioridades.txt"));
             String line = reader.readLine();
             while (line != null) {
                 this.tabelaDeProcessos.getProcesso(counter).setPrioridade(Integer.parseInt(line));
@@ -55,7 +55,7 @@ public class FileHandler {
     private void processarQuantum(){
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("programas/quantum.txt"));
+            reader = new BufferedReader(new FileReader("./programas/quantum.txt"));
             String line = reader.readLine();
             this.quantum = Integer.parseInt(line);
             reader.close();
