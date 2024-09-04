@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f746c0bc-1ae8-4786-89e7-454129f2dd92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalonadorescalador.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BCP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bloqueado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Estados.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ListaBloqueados.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ListaProntos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TabelaDeProcessos.java" afterDir="false" />
+    <list default="true" id="f746c0bc-1ae8-4786-89e7-454129f2dd92" name="Changes" comment="Adicionando classes iniciais do projeto.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FilaHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BCP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ListaBloqueados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ListaBloqueados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ListaProntos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FilaProntos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TabelaDeProcessos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabelaDeProcessos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +44,8 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -75,11 +72,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1725397382598</updated>
-      <workItem from="1725397383644" duration="5605000" />
+      <workItem from="1725397383644" duration="10560000" />
     </task>
+    <task id="LOCAL-00001" summary="Adicionando classes iniciais do projeto.">
+      <option name="closed" value="true" />
+      <created>1725405687055</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725405687055</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adicionando classes iniciais do projeto." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando classes iniciais do projeto." />
   </component>
 </project>

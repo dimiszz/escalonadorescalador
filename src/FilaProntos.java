@@ -1,10 +1,14 @@
 import java.util.PriorityQueue;
 
-public class ListaProntos {
+public class FilaProntos {
     private final PriorityQueue<BCP> priorityQueue;
 
-    public ListaProntos() {
+    public FilaProntos() {
         this.priorityQueue = new PriorityQueue<BCP>();
+    }
+
+    public boolean isEmpty(){
+        return this.priorityQueue.isEmpty();
     }
 
     public void add(BCP bcp) {
@@ -13,5 +17,11 @@ public class ListaProntos {
 
     public BCP getNext(){
         return priorityQueue.poll();
+    }
+
+    public int valorCreditoMaximo(){
+        BCP bcp = this.priorityQueue.peek();
+        if (bcp == null) return 0;
+        return bcp.getCreditos();
     }
 }

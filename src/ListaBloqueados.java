@@ -13,7 +13,7 @@ public class ListaBloqueados {
         bloqueados.add(bloqueado);
     }
 
-    public void atualizarBloqueado(ListaProntos listaProntos) {
+    public void atualizarBloqueados(FilaProntos listaProntos) {
         for (Iterator<Bloqueado> iterator = bloqueados.iterator(); iterator.hasNext();) {
             Bloqueado bloqueado = iterator.next();
             bloqueado.damage();
@@ -21,7 +21,10 @@ public class ListaBloqueados {
                 iterator.remove();
                 listaProntos.add(bloqueado.getBcp());
             }
-
         }
+    }
+
+    public boolean isEmpty(){
+        return bloqueados.isEmpty();
     }
 }

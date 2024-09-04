@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class TabelaDeProcessos {
     private final ArrayList<BCP> processos;
 
-    public TabelaDeProcessos(int qtdProcessos) {
-        this.processos = new ArrayList<>(qtdProcessos);
+    public TabelaDeProcessos() {
+        this.processos = new ArrayList<>();
     }
 
     public void addProcesso(BCP processo){
@@ -19,15 +19,19 @@ public class TabelaDeProcessos {
         return this.processos.get(pos);
     }
 
-    public void setPrioridades(ArrayList<Integer> prioridades){
-        for(int i = 0; i < this.processos.size(); i++){
-            this.processos.get(i).setPrioridade(prioridades.get(i));
+    public boolean exists(){
+        return !processos.isEmpty();
+    }
+
+    public void inicializaFilaProntos(FilaProntos fila){
+        for (BCP processo : this.processos) {
+            fila.add(processo);
         }
     }
 
-    public void inicializaFilaProntos(ListaProntos fila){
+    public void resetarCreditos(){
         for (BCP processo : this.processos) {
-            fila.add(processo);
+            processo.resetarCreditos();
         }
     }
 }

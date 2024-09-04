@@ -5,30 +5,38 @@ import java.util.PriorityQueue;
 public class Main {
     public static void main(String[] args) {
 
-        PriorityQueue<BCP> a = new PriorityQueue<BCP>();
+        int n_com;
+        ListaBloqueados listaBloqueados = new ListaBloqueados();
+        FilaProntos filaProntos = new FilaProntos();
+        TabelaDeProcessos tabelaDeProcessos = new TabelaDeProcessos();
+        FileHandler filehandler = new FileHandler(tabelaDeProcessos);
 
+        filehandler.processar();
+        tabelaDeProcessos.inicializaFilaProntos(filaProntos);
 
-        BCP b = new BCP(10);
-        b.setPrioridade(10);
+        while(tabelaDeProcessos.exists()){
+            if(filaProntos.isEmpty()) {
+                listaBloqueados.atualizarBloqueados(filaProntos);
+                continue;
+            }
+            if(filaProntos.valorCreditoMaximo() == 0 && listaBloqueados.isEmpty()){
+                tabelaDeProcessos.resetarCreditos();
+            }
+            BCP bcp = filaProntos.getNext();
+            bcp.setEstado(Estados.EXECUTANDO);
+            listaBloqueados.atualizarBloqueados(filaProntos);
 
-        BCP b2 = new BCP(10);
-        b2.setPrioridade(2);
+            for(n_com = 0; n_com < filehandler.getQuantum(); n_com++){
+                String command = bcp.getNextCommand();
+                switch(command){
+                    case "E/S":
+                        break;
+                    case "SAÍDA":
+                        break;
+                }
+            }
 
-        BCP b3 = new BCP(10);
-        b3.setPrioridade(3);
-
-        BCP b4 = new BCP(10);
-        b4.setPrioridade(421142134);
-
-        a.add(b);
-        a.add(b2);
-        a.add(b4);
-        a.add(b3);
-
-        for(int i = 0; i < 4; i++){
-            System.out.println(a.poll().getCreditos());
         }
-
 
 
     }

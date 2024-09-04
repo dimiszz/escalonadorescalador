@@ -66,7 +66,7 @@ public class BCP implements Comparable<BCP> {
         return comandos.get(this.pc);
     }
 
-    public String getBCPName(){
+    public String getProgramName(){
         return comandos.getFirst();
     }
 
