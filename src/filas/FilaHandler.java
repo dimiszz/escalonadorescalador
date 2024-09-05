@@ -2,8 +2,10 @@ package filas;
 
 import entities.BCP;
 import entities.Bloqueado;
+import main.Estados;
 
 import java.util.Iterator;
+import java.util.Map;
 
 public class FilaHandler {
      private FilaProntos prontos;
@@ -17,8 +19,8 @@ public class FilaHandler {
      }
 
      public void inicializaFilaProntos(){
-          for (BCP processo : this.processos.processos) {
-               prontos.add(processo);
+          for(BCP bcp : processos.processos.values()) {
+               prontos.add(bcp);
           }
      }
 
@@ -28,8 +30,10 @@ public class FilaHandler {
                bloqueado.damage();
                if(bloqueado.isDead()) {
                     iterator.remove();
+                    bloqueado.getBcp().setEstado(Estados.PRONTO);
                     prontos.add(bloqueado.getBcp());
                }
           }
      }
+
 }

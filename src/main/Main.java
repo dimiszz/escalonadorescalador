@@ -18,7 +18,7 @@ public class Main {
         filaHandler.inicializaFilaProntos();
 
         // Imprime os processos adicionados (teste)
-        tabelaDeProcessos.print();
+        //tabelaDeProcessos.print();
 
         // Laco principal
         while(tabelaDeProcessos.exists()){
@@ -31,10 +31,14 @@ public class Main {
             }
             BCP bcp = filaProntos.getNext();
             bcp.setEstado(Estados.EXECUTANDO);
-            bcp.useCredito();
+
+            if(bcp.getCreditos() != 0) bcp.useCredito();
+
             X = bcp.getX();
             Y = bcp.getY();
             filaHandler.atualizarBloqueados();
+
+            bcp.print();
 
             for(n_com = 0; n_com < tabelaDeProcessos.getQuantum(); n_com++){
                 String command = bcp.getNextCommand();
@@ -44,7 +48,8 @@ public class Main {
                         filaBloqueados.adicionarBloqueado(bcp);
                         break;
                     case 'S':
-                        tabelaDeProcessos.removeProcesso(bcp.getId());
+                        bcp.setEstado(Estados.FINALIZADO);
+                        tabelaDeProcessos.removeProcesso(bcp.getProgramName());
                         break;
                     case 'X':
                         X = Integer.parseInt(command.substring(2));

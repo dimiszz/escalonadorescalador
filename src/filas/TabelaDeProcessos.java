@@ -3,25 +3,30 @@ package filas;
 import entities.BCP;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TabelaDeProcessos {
-    protected final ArrayList<BCP> processos;
+    protected final HashMap<String, BCP> processos;
     private int quantum;
 
     public TabelaDeProcessos() {
-        this.processos = new ArrayList<>();
+        this.processos = new HashMap<>();
     }
 
     public void addProcesso(BCP processo){
-        this.processos.add(processo);
+        this.processos.put(processo.getProgramName(), processo);
     }
 
-    public void removeProcesso(int pos){
-        this.processos.remove(pos);
+    public void removeProcesso(String name){
+        this.processos.remove(name);
     }
 
     public BCP getProcesso(int pos){
-        return this.processos.get(pos);
+        for(BCP bcp : processos.values()){
+            if (bcp.getId() == pos) return bcp;
+        }
+        return null;
     }
 
     public boolean exists(){
@@ -29,8 +34,8 @@ public class TabelaDeProcessos {
     }
 
     public void resetarCreditos(){
-        for (BCP processo : this.processos) {
-            processo.resetarCreditos();
+        for(BCP bcp : processos.values()) {
+            bcp.resetarCreditos();
         }
     }
     public int getQuantum(){
@@ -44,8 +49,8 @@ public class TabelaDeProcessos {
     // Printar informacoes de todos os processos
     public void print(){
         System.out.println("Tabela de Processos:");
-        for (BCP processo : this.processos) {
-            processo.print();
+        for(BCP bcp : processos.values()) {
+            bcp.print();
         }
     }
 }

@@ -6,15 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f746c0bc-1ae8-4786-89e7-454129f2dd92" name="Changes" comment="Adicionando classes iniciais do projeto.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/BCP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bloqueado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Bloqueado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Estados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Estados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FilaHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filas/FilaHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FilaProntos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filas/FilaProntos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filas/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ListaBloqueados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filas/FilaBloqueados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TabelaDeProcessos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filas/TabelaDeProcessos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filas/FilaHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filas/FilaHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filas/TabelaDeProcessos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filas/TabelaDeProcessos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Estados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Estados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,22 +36,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/dimit/projects/usp/escalonadorescalador/src/Main.java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/dimit/projects/usp/escalonadorescalador/src/Main.java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -103,5 +98,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adicionando classes iniciais do projeto." />
     <option name="LAST_COMMIT_MESSAGE" value="Adicionando classes iniciais do projeto." />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="filas.FilaProntos" memberName="priorityQueue" />
+        <PinnedItemInfo parentTag="filas.FilaBloqueados" memberName="bloqueados" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
