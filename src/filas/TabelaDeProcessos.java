@@ -1,7 +1,12 @@
+package filas;
+
+import entities.BCP;
+
 import java.util.ArrayList;
 
 public class TabelaDeProcessos {
-    private final ArrayList<BCP> processos;
+    protected final ArrayList<BCP> processos;
+    private int quantum;
 
     public TabelaDeProcessos() {
         this.processos = new ArrayList<>();
@@ -23,16 +28,17 @@ public class TabelaDeProcessos {
         return !processos.isEmpty();
     }
 
-    public void inicializaFilaProntos(FilaProntos fila){
-        for (BCP processo : this.processos) {
-            fila.add(processo);
-        }
-    }
-
     public void resetarCreditos(){
         for (BCP processo : this.processos) {
             processo.resetarCreditos();
         }
+    }
+    public int getQuantum(){
+        return this.quantum;
+    }
+
+    protected void setQuantum(int quantum){
+        this.quantum = quantum;
     }
 
     // Printar informacoes de todos os processos

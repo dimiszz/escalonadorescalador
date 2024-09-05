@@ -1,3 +1,5 @@
+package entities;
+
 public class Bloqueado {
     private int lifetime;
     private BCP bcp;

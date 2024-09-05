@@ -1,3 +1,7 @@
+package filas;
+
+import entities.BCP;
+
 import java.util.PriorityQueue;
 
 public class FilaProntos {

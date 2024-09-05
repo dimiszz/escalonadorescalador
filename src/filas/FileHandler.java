@@ -1,10 +1,13 @@
+package filas;
+
+import entities.BCP;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
 public class FileHandler {
     private TabelaDeProcessos tabelaDeProcessos;
-    private int quantum;
 
     public FileHandler(TabelaDeProcessos tabelaDeProcessos) {
         this.tabelaDeProcessos = tabelaDeProcessos;
@@ -14,13 +17,15 @@ public class FileHandler {
     private void processarArquivos() {
         BufferedReader reader;
         File[] files = new File("./programas").listFiles();
+        int id = 0;
         for (File file : files) {
             if (file.isFile()) {
                 try {
                     reader = new BufferedReader(new FileReader("./programas/" + file.getName()));
                     if (file.getName().startsWith("prioridades") || file.getName().startsWith("quantum"))
                         continue;
-                    BCP bcp = new BCP(24);
+                    BCP bcp = new BCP(24, id);
+                    id++;
                     String line = reader.readLine();
                     while (line != null) {
                         bcp.addCommand(line);
@@ -52,12 +57,12 @@ public class FileHandler {
         }
     }
 
-    private void processarQuantum(){
+    protected void processarQuantum(){
         BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader("./programas/quantum.txt"));
             String line = reader.readLine();
-            this.quantum = Integer.parseInt(line);
+            this.tabelaDeProcessos.setQuantum(Integer.parseInt(line));
             reader.close();
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
@@ -68,9 +73,5 @@ public class FileHandler {
         this.processarArquivos();
         this.processarPrioridades();
         this.processarQuantum();
-    }
-
-    public int getQuantum() {
-        return quantum;
     }
 }

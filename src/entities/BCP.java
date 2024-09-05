@@ -1,3 +1,7 @@
+package entities;
+
+import main.Estados;
+
 import java.util.ArrayList;
 
 public class BCP implements Comparable<BCP> {
@@ -8,11 +12,19 @@ public class BCP implements Comparable<BCP> {
     private int Y;
     private int prioridade;
     private int creditos;
+    private int id;
 
-    public BCP(int qtdComandos){
+    public BCP(int qtdComandos, int id){
         this.comandos = new ArrayList<String>(qtdComandos);
         this.estado = Estados.PRONTO;
         this.pc = 0;
+        this.id = id;
+        this.X = 0;
+        this.Y = 0;
+    }
+
+    public int getId(){
+        return this.id;
     }
 
     public int getCreditos(){
