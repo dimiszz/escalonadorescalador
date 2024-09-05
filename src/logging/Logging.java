@@ -6,9 +6,9 @@ import java.io.IOException;
 public class Logging {
     private static FileWriter writter;
 
-    public static void startLog() {
+    public static void startLog(int qtdQuantum) {
         try {
-            writter = new FileWriter("log.txt");
+            writter = new FileWriter(String.format("log%02d.txt", qtdQuantum));
         }
         catch (IOException e) {
             System.out.println("Erro criando o arquivo de log.");

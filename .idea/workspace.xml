@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f746c0bc-1ae8-4786-89e7-454129f2dd92" name="Changes" comment="Adicionando classes iniciais do projeto.">
-      <change afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logging/Logging.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/BCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/BCP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filas/FilaHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filas/FilaHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filas/FilaProntos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filas/FilaProntos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/programas/quantum.txt" beforeDir="false" afterPath="$PROJECT_DIR$/programas/quantum.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logging/Logging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logging/Logging.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,13 +32,16 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2lZpJQThKF1TpuRXmfN8GhI4cJu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -98,6 +100,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Adicionando classes iniciais do projeto." />
     <option name="LAST_COMMIT_MESSAGE" value="Adicionando classes iniciais do projeto." />
   </component>

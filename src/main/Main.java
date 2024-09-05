@@ -14,7 +14,7 @@ public class Main {
         // Criacao das estruturas
         int n_com, X, Y;
 
-        Logging.startLog();
+
 
         FilaBloqueados filaBloqueados = new FilaBloqueados();
         FilaProntos filaProntos = new FilaProntos();
@@ -24,6 +24,8 @@ public class Main {
 
         filehandler.processar();
         filaHandler.inicializaFilaProntos();
+
+        Logging.startLog(tabelaDeProcessos.getQuantum());
 
         filaProntos.logFilaProntos();
 
