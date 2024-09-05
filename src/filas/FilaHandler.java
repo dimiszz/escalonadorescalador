@@ -2,6 +2,7 @@ package filas;
 
 import entities.BCP;
 import entities.Bloqueado;
+import logging.Logging;
 import main.Estados;
 
 import java.util.Iterator;

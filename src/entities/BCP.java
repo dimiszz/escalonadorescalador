@@ -98,4 +98,8 @@ public class BCP implements Comparable<BCP> {
             System.out.println(comando);
         }
     }
+
+    public void printNome(){
+        System.out.println("Nome:" + this.getProgramName());
+    }
 }
