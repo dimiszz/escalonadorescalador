@@ -2,9 +2,7 @@ package filas;
 
 import entities.BCP;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 public class TabelaDeProcessos {
     protected final HashMap<String, BCP> processos;
@@ -46,7 +44,7 @@ public class TabelaDeProcessos {
         this.quantum = quantum;
     }
 
-    // Printar informacoes de todos os processos
+    /* Printar informacoes de todos os processos */
     public void print(){
         System.out.println("Tabela de Processos:");
         for(BCP bcp : processos.values()) {

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/* classe utilizada para gerar o log */
 public class Logging {
     private static FileWriter writter;
 
