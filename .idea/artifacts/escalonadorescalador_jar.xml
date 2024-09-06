@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="escalonadorescalador:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/escalonadorescalador_jar</output-path>
+    <root id="archive" name="escalonadorescalador.jar">
+      <element id="module-output" name="escalonadorescalador" />
+    </root>
+  </artifact>
+</component>

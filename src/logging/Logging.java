@@ -2,6 +2,8 @@ package logging;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /* classe utilizada para gerar o log */
 public class Logging {
@@ -9,7 +11,8 @@ public class Logging {
 
     public static void startLog(int qtdQuantum) {
         try {
-            writter = new FileWriter(String.format("log%02d.txt", qtdQuantum));
+            Files.createDirectories(Paths.get("logs"));
+            writter = new FileWriter(String.format("logs/log%02d.txt", qtdQuantum));
         }
         catch (IOException e) {
             System.out.println("Erro criando o arquivo de log.");

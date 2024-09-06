@@ -55,8 +55,6 @@ public class Main {
             Y = bcp.getY();
             filaHandler.atualizarBloqueados();
 
-            bcp.printNome();
-
             //laço para instruções em um quantum
             for(n_com = 0; n_com < tabelaDeProcessos.getQuantum(); n_com++){
                 if(bcp.getEstado() != Estados.EXECUTANDO) break;
