@@ -7,15 +7,16 @@ import logging.Logging;
 public class Main {
     public static void main(String[] args) {
 
+        /* variáveis usadas para estatísticas*/
         int total_quantum = 0;
         int instrucoes = 0;
         int quantidade_processos;
         float  media_trocas, media_quantums;
-        // Criacao das estruturas
+
+        /* registradores e numero de instruções rodadas em um quantum */
         int n_com, X, Y;
 
-
-
+        /* Criacao das estruturas */
         FilaBloqueados filaBloqueados = new FilaBloqueados();
         FilaProntos filaProntos = new FilaProntos();
         TabelaDeProcessos tabelaDeProcessos = new TabelaDeProcessos();
@@ -34,7 +35,7 @@ public class Main {
         // Imprime os processos adicionados (teste)
         //tabelaDeProcessos.print();
 
-        // Laco principal
+        /* Laco principal */
         while(tabelaDeProcessos.exists()){
             if(filaProntos.isEmpty()) {
                 filaHandler.atualizarBloqueados();
@@ -56,7 +57,7 @@ public class Main {
 
             bcp.printNome();
 
-
+            //laço para instruções em um quantum
             for(n_com = 0; n_com < tabelaDeProcessos.getQuantum(); n_com++){
                 if(bcp.getEstado() != Estados.EXECUTANDO) break;
                 String command = bcp.getNextCommand();
@@ -81,21 +82,25 @@ public class Main {
                         break;
                 }
             }
-
+            
+            //monitoramento para estatísticas
             instrucoes += n_com;
             total_quantum++;
 
             Logging.log("Interrompendo " + bcp.getProgramName() + " após " + n_com + " instruções");
 
+            //atualiza registradores
             bcp.setX(X);
             bcp.setY(Y);
-
+            
+            //volta para fila de prontos se não foi bloqueado ou terminou
             if(bcp.getEstado() == Estados.EXECUTANDO) {
                 bcp.setEstado(Estados.PRONTO);
                 filaProntos.add(bcp);
             }
         }
 
+        //ao final do código realiza calculo de estatísticas
         media_trocas = (float) (total_quantum - 1) / quantidade_processos;
 
         media_quantums = (float) instrucoes / (total_quantum);

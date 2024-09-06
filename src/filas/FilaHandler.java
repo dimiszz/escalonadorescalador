@@ -2,12 +2,11 @@ package filas;
 
 import entities.BCP;
 import entities.Bloqueado;
-import logging.Logging;
 import main.Estados;
 
 import java.util.Iterator;
-import java.util.Map;
 
+/* classe utilizada para gerenciar as filas de forma conjunta */
 public class FilaHandler {
      private FilaProntos prontos;
      private FilaBloqueados bloqueados;
@@ -19,12 +18,15 @@ public class FilaHandler {
           this.processos = processos;
      }
 
+     /* Coloca os processos na fila  */
      public void inicializaFilaProntos(){
           for(BCP bcp : processos.processos.values()) {
                prontos.add(bcp);
           }
      }
 
+     /* gerencia a fila de bloqueados, atualizando após um quantum
+      e removendo caso tenha acabado seu tempo */
      public void atualizarBloqueados() {
           for (Iterator<Bloqueado> iterator = bloqueados.bloqueados.iterator(); iterator.hasNext();) {
                Bloqueado bloqueado = iterator.next();

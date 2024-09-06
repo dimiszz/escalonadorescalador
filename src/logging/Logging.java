@@ -3,6 +3,7 @@ package logging;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/* classe utilizada para gerar o log */
 public class Logging {
     private static FileWriter writter;
 
