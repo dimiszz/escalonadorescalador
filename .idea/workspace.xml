@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="escalonadorescalador:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f746c0bc-1ae8-4786-89e7-454129f2dd92" name="Changes" comment="Adicionando classes iniciais do projeto.">
-      <change afterPath="$PROJECT_DIR$/02log.txt" afterDir="false" />
+    <list default="true" id="f746c0bc-1ae8-4786-89e7-454129f2dd92" name="Changes" comment="Trocando log de lugar.">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/escalonadorescalador_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programas/quantum.txt" beforeDir="false" afterPath="$PROJECT_DIR$/programas/quantum.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logging/Logging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logging/Logging.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
@@ -53,6 +57,10 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/dimit/projects/usp/escalonadorescalador/src/Main.java",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -82,7 +90,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725405687055</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Trocando log de lugar.">
+      <option name="closed" value="true" />
+      <created>1725579620403</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725579620403</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,7 +118,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Adicionando classes iniciais do projeto." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando classes iniciais do projeto." />
+    <MESSAGE value="Trocando log de lugar." />
+    <option name="LAST_COMMIT_MESSAGE" value="Trocando log de lugar." />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
