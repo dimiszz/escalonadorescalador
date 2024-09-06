@@ -7,33 +7,29 @@ import logging.Logging;
 public class Main {
     public static void main(String[] args) {
 
-        /* variáveis usadas para estatísticas*/
+        /* Variaveis usadas para estatisticas*/
         int total_quantum = 0;
         int instrucoes = 0;
         int quantidade_processos;
         float  media_trocas, media_quantums;
 
-        /* registradores e numero de instruções rodadas em um quantum */
+        /* Registradores e numero de instrucoes rodadas em um quantum */
         int n_com, X, Y;
 
         /* Criacao das estruturas */
         FilaBloqueados filaBloqueados = new FilaBloqueados();
         FilaProntos filaProntos = new FilaProntos();
         TabelaDeProcessos tabelaDeProcessos = new TabelaDeProcessos();
-        FileHandler filehandler = new FileHandler(tabelaDeProcessos);
+        FileHandler fileHandler = new FileHandler(tabelaDeProcessos);
         FilaHandler filaHandler = new FilaHandler(filaProntos, filaBloqueados, tabelaDeProcessos);
 
-        filehandler.processar();
+        fileHandler.processar();
         filaHandler.inicializaFilaProntos();
-
+        
         Logging.startLog(tabelaDeProcessos.getQuantum());
-
         filaProntos.logFilaProntos();
 
         quantidade_processos = filaProntos.getSize();
-
-        // Imprime os processos adicionados (teste)
-        //tabelaDeProcessos.print();
 
         /* Laco principal */
         while(tabelaDeProcessos.exists()){
@@ -55,7 +51,7 @@ public class Main {
             Y = bcp.getY();
             filaHandler.atualizarBloqueados();
 
-            //laço para instruções em um quantum
+            // Laco para instrucoes em um quantum
             for(n_com = 0; n_com < tabelaDeProcessos.getQuantum(); n_com++){
                 if(bcp.getEstado() != Estados.EXECUTANDO) break;
                 String command = bcp.getNextCommand();
@@ -81,34 +77,30 @@ public class Main {
                 }
             }
             
-            //monitoramento para estatísticas
+            // Monitoramento para estatisticas
             instrucoes += n_com;
             total_quantum++;
 
             Logging.log("Interrompendo " + bcp.getProgramName() + " após " + n_com + " instruções");
 
-            //atualiza registradores
+            // Atualiza registradores
             bcp.setX(X);
             bcp.setY(Y);
             
-            //volta para fila de prontos se não foi bloqueado ou terminou
+            // Volta para fila de prontos se nao foi bloqueado ou terminou
             if(bcp.getEstado() == Estados.EXECUTANDO) {
                 bcp.setEstado(Estados.PRONTO);
                 filaProntos.add(bcp);
             }
         }
 
-        //ao final do código realiza calculo de estatísticas
+        /* Calculo e impressao de estatisticas*/
         media_trocas = (float) (total_quantum - 1) / quantidade_processos;
-
         media_quantums = (float) instrucoes / (total_quantum);
 
         Logging.log("MEDIA DE TROCAS: " + media_trocas);
-
         Logging.log("MEDIA DE INSTRUÇÕES: " + media_quantums);
-
         Logging.log("QUANTUM: " + tabelaDeProcessos.getQuantum());
-
         Logging.endLog();
     }
 }

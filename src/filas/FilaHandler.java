@@ -6,27 +6,28 @@ import main.Estados;
 
 import java.util.Iterator;
 
-/* classe utilizada para gerenciar as filas de forma conjunta */
+/* Classe utilizada para gerenciar as filas de forma conjunta */
 public class FilaHandler {
      private FilaProntos prontos;
      private FilaBloqueados bloqueados;
      private TabelaDeProcessos processos;
 
+    /* Construtor */
      public FilaHandler(FilaProntos prontos, FilaBloqueados bloqueados, TabelaDeProcessos processos) {
           this.prontos = prontos;
           this.bloqueados = bloqueados;
           this.processos = processos;
      }
 
-     /* Coloca os processos na fila  */
+     /* Coloca os processos na fila */
      public void inicializaFilaProntos(){
           for(BCP bcp : processos.processos.values()) {
                prontos.add(bcp);
           }
      }
 
-     /* gerencia a fila de bloqueados, atualizando após um quantum
-      e removendo caso tenha acabado seu tempo */
+     /* Gerencia a fila de bloqueados, atualizando após um quantum
+        e removendo caso tenha acabado seu tempo */
      public void atualizarBloqueados() {
           for (Iterator<Bloqueado> iterator = bloqueados.bloqueados.iterator(); iterator.hasNext();) {
                Bloqueado bloqueado = iterator.next();

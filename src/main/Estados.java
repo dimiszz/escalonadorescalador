@@ -1,8 +1,7 @@
 package main;
 
-/* possíveis estados dos processos */
+/* Possiveis estados dos processos */
 public enum Estados {
-
     EXECUTANDO,
     PRONTO,
     BLOQUEADO,
