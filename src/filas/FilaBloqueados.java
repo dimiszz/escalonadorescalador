@@ -3,7 +3,6 @@ package filas;
 import entities.Bloqueado;
 import entities.BCP;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 

@@ -6,6 +6,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
+/* classe que gerencia os arquivos de entrada
+    (quantum, prioridades e processos) */
+
 public class FileHandler {
     private TabelaDeProcessos tabelaDeProcessos;
 
@@ -13,7 +16,7 @@ public class FileHandler {
         this.tabelaDeProcessos = tabelaDeProcessos;
     }
 
-    /// OTIMIZAR CONTADOR DE LINHAS!
+    /* adiciona os programas na tabela de processos e cria o BCP */
     private void processarArquivos() {
         BufferedReader reader;
         File[] files = new File("./programas").listFiles();
@@ -40,6 +43,7 @@ public class FileHandler {
         }
     }
 
+    /* adiciona as prioridades aos seus devidos programas */
     private void processarPrioridades(){
         BufferedReader reader;
         int counter = 0;
@@ -57,6 +61,7 @@ public class FileHandler {
         }
     }
 
+    /* armazena o tamanho do quantum que será utilizado */
     protected void processarQuantum(){
         BufferedReader reader;
         try {
@@ -69,6 +74,7 @@ public class FileHandler {
         }
     }
 
+    /* função que será chamada na main para realizar o processamento dos arquivos */
     public void processar(){
         this.processarArquivos();
         this.processarPrioridades();
